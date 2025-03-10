@@ -29,7 +29,7 @@ namespace StudentMVCApp.Controllers
             return await _context.Students.ToListAsync();
         }
 
-        // GET: api/students/5
+        // GET: api/students
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
@@ -53,7 +53,7 @@ namespace StudentMVCApp.Controllers
             return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, student);
         }
 
-        // PUT: api/students/5
+        // PUT: api/students
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
@@ -83,7 +83,7 @@ namespace StudentMVCApp.Controllers
             return NoContent();
         }
 
-        // DELETE: api/students/5
+        // DELETE: api/students
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
